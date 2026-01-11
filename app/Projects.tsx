@@ -4,48 +4,111 @@ interface Project {
   id: number;
   title: string;
   description: string;
-  image?: string;
+  media?: {
+    type: "video" | "audio" | "image";
+    src: string;
+  };
+  link?: string;
+}
+
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  media?: {
+    type: "video" | "audio" | "image";
+    src: string;
+  };
   link?: string;
 }
 
 const projects: Project[] = [
   {
     id: 1,
-    title: "Project #1",
-    description: "A sentence/phrase about the project and targets",
+    title: "Mentoro",
+    description: "Private tutoring app, inspired from Hertz Music app",
+    media: {
+      type: "video",
+      src: "/3.mp4",
+    },
     link: "#",
   },
   {
     id: 2,
-    title: "Project #2",
-    description: "A sentence/phrase about the project and targets",
+    title: "Meseriasul",
+    description: "App/website for solving construction problems in Romania",
+    media: {
+      type: "video",
+      src: "/5.mp4",
+    },
     link: "#",
   },
   {
     id: 3,
-    title: "Project #3",
-    description: "A sentence/phrase about the project and targets",
+    title: "Hertz Music",
+    description:
+      "Personalized tutoring app for a client who is a music teacher",
+    media: {
+      type: "video",
+      src: "/2.mp4",
+    },
     link: "#",
   },
   {
     id: 4,
-    title: "Project #4",
-    description: "A sentence/phrase about the project and targets",
+    title: "RBS branding",
+    description: "Construction company visual identity",
+    media: {
+      type: "image",
+      src: "/4.png",
+    },
     link: "#",
   },
   {
     id: 5,
-    title: "Project #5",
-    description: "A sentence/phrase about the project and targets",
+    title: "Wedding app",
+    description: "Personalized online wedding invitations",
+    media: {
+      type: "video",
+      src: "/6.mp4",
+    },
     link: "#",
   },
   {
     id: 6,
-    title: "Project #6",
-    description: "A sentence/phrase about the project and targets",
+    title: "Gym tracker",
+    description: "Personalized gym tracker app, with customizable workouts",
+    media: {
+      type: "video",
+      src: "/1.mp4",
+    },
     link: "#",
   },
 ];
+
+const MediaRenderer = ({ media }: { media: Project["media"] }) => {
+  if (!media) return null;
+
+  switch (media.type) {
+    case "video":
+      return (
+        <video className="w-full h-full object-cover" autoPlay muted loop>
+          <source src={media.src} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      );
+    case "image":
+      return (
+        <img
+          src={media.src}
+          alt="Project media"
+          className="w-full h-full object-cover"
+        />
+      );
+    default:
+      return null;
+  }
+};
 
 export default function PortfolioPage() {
   return (
@@ -74,16 +137,20 @@ export default function PortfolioPage() {
               >
                 {/* Image Container */}
                 <div
-                  className="relative w-full bg-gradient-to-br from-slate-200 to-slate-300 rounded-lg overflow-hidden mb-4 transition-all duration-300 group-hover:scale-90 group-hover:brightness-70 "
+                  className="relative w-full bg-gradient-to-br from-slate-200 to-slate-300 rounded-lg overflow-hidden mb-4 transition-all duration-300 group-hover:scale-90 group-hover:brightness-70"
                   style={{ aspectRatio: "7/5" }}
                 >
-                  <div className="w-full h-full flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-6xl text-slate-400 font-light">
-                        {project.id}
+                  {project.media ? (
+                    <MediaRenderer media={project.media} />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="text-6xl text-slate-400 font-light">
+                          {project.id}
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  )}
                 </div>
 
                 {/* Text Content */}
