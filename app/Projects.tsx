@@ -151,7 +151,7 @@ export default function PortfolioPage() {
       {/* Footer */}
       <footer className="bg-slate-900 text-slate-300 py-12 text-center">
         <p className="text-sm text-slate-400">
-          © 2025 Ioana Serban (to be Rotariu). All rights reserved.
+          © 2025 Ioana Serban. All rights reserved.
         </p>
       </footer>
     </div>

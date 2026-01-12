@@ -10,7 +10,7 @@ export default function Portofolio() {
           <GlassNavbar />
           <div className="flex flex-col items-center">
             <p className="py-6 bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white to-white/40 playfair-display-italic ">
-              Ioana my Serban
+              Ioana Serban
             </p>
             <div className="mt-6 space-y-1 text-sm md:text-lg lg:text-md font-normal montserrat from-white/80 to-white/20 ">
               <p>UX/UI Designer</p>
