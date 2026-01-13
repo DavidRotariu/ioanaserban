@@ -190,8 +190,8 @@ export default function Portofolio() {
           </div>
         </div>
       </section>
-      <footer className="bg-slate-900 text-slate-300 py-12 text-center">
-        <p className="text-sm text-slate-400">
+      <footer className="bg-[#16515F] text-slate-300 py-12 text-center">
+        <p className="text-sm text-white">
           © 2025 Ioana Serban. All rights reserved.
         </p>
       </footer>
