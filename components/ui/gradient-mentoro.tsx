@@ -191,7 +191,7 @@ export const BackgroundGradientAnimation = ({
         >
           <path
             d="M 0,300 L 1200,300 L 1200,0 L 0,0 Z M 0,0 L 1200,0 A 800,800 0 0,1 0,0 Z"
-            fill="white"
+            fill="#F5F9FF"
             fillRule="evenodd"
           />
         </svg>
