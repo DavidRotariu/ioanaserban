@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import React from "react";
 import GlassNavbar from "../Navbar";
@@ -20,7 +21,7 @@ export default function AboutPage() {
           </div>
         </div>
       </BackgroundGradientAnimation>
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-5xl mx-auto pt-16">
         {/* Header */}
         <h1 className="text-5xl md:text-6xl text-[#4B3BA3] font-bold italic playfair-display-italic mt-4 mb-2">
           Hi, I'm Ioana
