@@ -18,7 +18,7 @@ const projects: Project[] = [
     description: "Private tutoring app, inspired from Hertz Music app",
     media: {
       type: "video",
-      src: "https://res.cloudinary.com/dsaano3rp/video/upload/q_auto,f_auto/v1768151578/Mentoro_-_mockup_-_Figma_2026-01-10_18-14-00_ycszyg.mp4",
+      src: "https://res.cloudinary.com/dsaano3rp/video/upload/v1768240441/Mentoro_-_mockup_-_Figma_2026-01-11_19-46-33_vpefhi.mp4",
     },
     link: "#",
   },
@@ -39,7 +39,7 @@ const projects: Project[] = [
       "Personalized tutoring app for a client who is a music teacher",
     media: {
       type: "video",
-      src: "https://res.cloudinary.com/dsaano3rp/video/upload/q_auto,f_auto/v1768151665/Media_Hertz_app_-_Mockup_-_Figma_2026-01-10_18-39-50_hojmtb.mp4",
+      src: "https://res.cloudinary.com/dsaano3rp/video/upload/v1768240463/Media_Hertz_app_-_Mockup_-_Figma_2026-01-11_19-51-26_pwrw02.mp4",
     },
     link: "#",
   },
@@ -69,7 +69,7 @@ const projects: Project[] = [
     description: "Personalized gym tracker app, with customizable workouts",
     media: {
       type: "video",
-      src: "https://res.cloudinary.com/dsaano3rp/video/upload/q_auto,f_auto/v1768151565/GYM_tracker_app_-_mockup_-_Figma_2026-01-10_18-53-18_a3wrhl.mp4",
+      src: "https://res.cloudinary.com/dsaano3rp/video/upload/v1768240397/GYM_tracker_app_-_mockup_-_Figma_2026-01-11_19-52-43_ghfu8n.mp4",
     },
     link: "#",
   },
