@@ -10,8 +10,8 @@ export default function Portofolio() {
       <BackgroundGradientAnimation>
         <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl">
           <GlassNavbar />
-          <div className="flex flex-col items-center py-6">
-            <p className=" bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white to-white/40 playfair-display-italic ">
+          <div className="flex flex-col items-center pt-16">
+            <p className="patrick-hand-regular text-8xl bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white to-white/40">
               Mentoro
             </p>
             <div className="mt-6 space-y-1 text-sm md:text-lg lg:text-md font-normal montserrat from-white/80 to-white/20 ">
@@ -31,7 +31,7 @@ export default function Portofolio() {
           </div>
           <div className="px-1 py-2 text-cyan-600 text-md montserrat flex items-center gap-2">
             <Clock className="w-5 h-5" />
-            Month 2025 - Current time
+            December 2025 - Ongoing
           </div>
           <div className="px-1 py-2 text-cyan-600 text-md montserrat flex items-center gap-2">
             <Smartphone className="w-5 h-5" />
@@ -132,7 +132,7 @@ export default function Portofolio() {
       </section>
 
       {/* Solved Problems Section */}
-      <section className="px-4 md:px-8 lg:px-16 max-w-4xl mx-auto py-8">
+      <section className="px-4 md:px-8 lg:px-16 max-w-4xl mx-auto pt-8">
         <div className="p-8">
           <h2 className="text-5xl font-bold text-[#16515F] mb-6 patrick-hand-regular">
             What problems were solved?
@@ -140,22 +140,29 @@ export default function Portofolio() {
           <p className="text-md text-slate-700 leading-relaxed montserrat-regular mb-0">
             Now users have an overall view over their schedule.
           </p>
-          <div className="flex flex-col gap-6 mt-8">
-            <Image
-              src="/image0.png"
-              alt="Mentoro screenshot 1"
-              width={1631}
-              height={766}
-              className="w-full object-cover"
-            />
-            <Image
-              src="/image1.png"
-              alt="Mentoro screenshot 2"
-              width={1289}
-              height={708}
-              className="w-full object-cover"
-            />
-          </div>
+        </div>
+      </section>
+      <section className="px-4 md:px-8 lg:px-16 max-w-6xl mx-auto">
+        <div className="flex flex-col gap-6 mt-8">
+          <Image
+            src="/image0.png"
+            alt="Mentoro screenshot 1"
+            width={1631}
+            height={766}
+            className="w-full object-cover"
+          />
+          <Image
+            src="/image1.png"
+            alt="Mentoro screenshot 2"
+            width={1289}
+            height={708}
+            className="w-full object-cover"
+          />
+        </div>
+      </section>
+
+      <section className="px-4 md:px-8 lg:px-16 max-w-4xl mx-auto py-4">
+        <div className="p-8">
           <div className="my-10 ">
             <p className="text-xl text-slate-800 mb-4 font-medium montserrat-regular">
               Now our users can:
