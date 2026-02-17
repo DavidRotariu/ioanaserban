@@ -2,7 +2,7 @@
 import { BackgroundGradientAnimation } from "@/components/ui/gradient-mentoro";
 import GlassNavbar from "../Navbar";
 import Image from "next/image";
-import { Clock, Smartphone } from "lucide-react";
+import { Clock, Smartphone, Link as LinkIcon } from "lucide-react";
 
 export default function Portofolio() {
   return (
@@ -12,7 +12,7 @@ export default function Portofolio() {
           <GlassNavbar />
           <div className="flex flex-col items-center pt-16">
             <p className="patrick-hand-regular text-8xl bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white to-white/40">
-              Mentoro
+              Meditoro
             </p>
             <div className="mt-6 space-y-1 text-sm md:text-lg lg:text-md font-normal montserrat from-white/80 to-white/20 ">
               <p>A simple app</p>
@@ -36,6 +36,17 @@ export default function Portofolio() {
           <div className="px-1 py-2 text-cyan-600 text-md montserrat flex items-center gap-2">
             <Smartphone className="w-5 h-5" />
             Mobile app
+          </div>
+          <div className="px-1 py-2 text-cyan-600 text-md montserrat flex items-center gap-2">
+            <LinkIcon className="w-5 h-5" />
+            <a
+              href="https://meditoro.ro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              meditoro.ro
+            </a>
           </div>
         </div>
       </section>
@@ -135,7 +146,7 @@ export default function Portofolio() {
       <section className="px-4 md:px-8 lg:px-16 max-w-4xl mx-auto pt-8">
         <div className="p-8">
           <h2 className="text-5xl font-bold text-[#16515F] mb-6 patrick-hand-regular">
-            What problems were solved?
+            The first solution I came up with
           </h2>
           <p className="text-md text-slate-700 leading-relaxed montserrat-regular mb-0">
             Now users have an overall view over their schedule.
@@ -156,6 +167,33 @@ export default function Portofolio() {
             alt="Mentoro screenshot 2"
             width={1289}
             height={708}
+            className="w-full object-cover"
+          />
+        </div>
+      </section>
+
+      {/* Solved Problems Section */}
+      <section className="px-4 md:px-8 lg:px-16 max-w-4xl mx-auto pt-8">
+        <div className="p-8">
+          <h2 className="text-5xl font-bold text-[#16515F] mb-6 patrick-hand-regular">
+            User research and final design
+          </h2>
+          <p className="text-md text-slate-700 leading-relaxed montserrat-regular mb-0">
+            After speaking with users, I identified a key issue that needed to
+            be addressed: the app felt{" "}
+            <span className="underline">overwhelming</span>. As a result, I
+            redesigned it to create a more intuitive and user-friendly final
+            version.
+          </p>
+        </div>
+      </section>
+      <section className="px-4 md:px-8 lg:px-16 max-w-6xl mx-auto">
+        <div className="flex flex-col gap-6 mt-8">
+          <Image
+            src="/image2.png"
+            alt="Mentoro screenshot 2"
+            width={1456}
+            height={688}
             className="w-full object-cover"
           />
         </div>
@@ -194,6 +232,52 @@ export default function Portofolio() {
                 whenever they need them.
               </li>
             </ul>
+          </div>
+        </div>
+      </section>
+      {/* Reviews Section */}
+      <section className="px-4 md:px-8 lg:px-16 max-w-4xl mx-auto py-8">
+        <div className="p-8">
+          <h2 className="text-5xl font-bold text-[#16515F] mb-6 patrick-hand-regular">
+            Reviews from our customers
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="rounded-lg bg-white shadow-sm border border-cyan-100 p-6">
+              <p className="text-slate-700 text-md montserrat-regular">
+                “Mentoro helped me keep track of all my students and payments.
+                Planning lessons is now a breeze.”
+              </p>
+              <div className="mt-4 text-slate-500 text-sm montserrat-regular">
+                — Andreea, Violin Teacher
+              </div>
+            </div>
+            <div className="rounded-lg bg-white shadow-sm border border-cyan-100 p-6">
+              <p className="text-slate-700 text-md montserrat-regular">
+                “I love the schedule overview. It saves me so much time every
+                week.”
+              </p>
+              <div className="mt-4 text-slate-500 text-sm montserrat-regular">
+                — Elena, English Teacher
+              </div>
+            </div>
+            <div className="rounded-lg bg-white shadow-sm border border-cyan-100 p-6">
+              <p className="text-slate-700 text-md montserrat-regular">
+                “Finally, one place for attendance, notes, and payments. Super
+                easy to use.”
+              </p>
+              <div className="mt-4 text-slate-500 text-sm montserrat-regular">
+                — Fineas, Piano Teacher
+              </div>
+            </div>
+            <div className="rounded-lg bg-white shadow-sm border border-cyan-100 p-6">
+              <p className="text-slate-700 text-md montserrat-regular">
+                “My students appreciate the clarity and I appreciate the
+                efficiency.”
+              </p>
+              <div className="mt-4 text-slate-500 text-sm montserrat-regular">
+                — David, Computer Science Tutor
+              </div>
+            </div>
           </div>
         </div>
       </section>

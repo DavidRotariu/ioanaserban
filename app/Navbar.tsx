@@ -32,13 +32,6 @@ export default function GlassNavbar() {
     { href: "/work", label: "Work" },
     { href: "/about", label: "About" },
   ];
-  // Only show links to pages that are NOT the current page
-  const filteredNavItems = navItems.filter((item) => {
-    // Special case: treat "/" as home, and pathname can be "/", "/about", or "/work"
-    if (pathname === "/" && item.href === "/") return false;
-    if (pathname.startsWith(item.href) && item.href !== "/") return false;
-    return true;
-  });
   return (
     <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-9999 pointer-events-auto">
       <div
@@ -58,7 +51,7 @@ export default function GlassNavbar() {
 
         {/* Middle - Navigation Links */}
         <div className="flex items-center gap-4">
-          {filteredNavItems.map((item) => (
+          {navItems.map((item) => (
             <NavItem key={item.href} href={item.href} label={item.label} />
           ))}
         </div>
