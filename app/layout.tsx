@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ioana Servan - UX/UI Designer",
-  description: "Ioana Servan - UX/UI Designer Portfolio Website",
+  title: "Ioana Serban - UX/UI Designer",
+  description: "Ioana Serban - UX/UI Designer Portfolio Website",
 };
 
 export default function RootLayout({
