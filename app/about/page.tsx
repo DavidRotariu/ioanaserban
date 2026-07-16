@@ -1,134 +1,149 @@
-/* eslint-disable react/no-unescaped-entities */
-import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
-import React from "react";
-import GlassNavbar from "../Navbar";
+import type { Metadata } from "next";
+import Reveal from "@/components/site/Reveal";
+import { SITE } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "How Ioana Serban got into design, and what she cares about as a designer.",
+};
+
+const timeline = [
+  {
+    period: "Early on",
+    text: "A childhood spent drawing and painting turned, in high school, into an unexpected pairing with programming and technology.",
+  },
+  {
+    period: "2023",
+    text: "Discovered UI/UX and graphic design — the place where both halves finally fit. Courses, self-teaching, and a clear direction.",
+  },
+  {
+    period: "2024",
+    text: "First client projects. Learned that real design starts with listening: user needs and practical solutions over pretty screens.",
+  },
+  {
+    period: "2025",
+    text: "Larger and more diverse work — branding, visual identities, and app designs that grew into fully functional products used by real clients.",
+  },
+  {
+    period: "Now",
+    text: "Building Mentoro, taking on bigger clients, and chasing meaningful, user-centered work.",
+  },
+];
+
+const values = [
+  {
+    title: "Empathize first",
+    text: "I design for the tutor who isn't comfortable with technology, the builder answering requests from a job site. If they can't use it, it isn't done.",
+  },
+  {
+    title: "Original and functional",
+    text: "A design should be recognizable without being decorative. Every distinctive choice has to earn its place by helping someone do something.",
+  },
+  {
+    title: "Patient and meticulous",
+    text: "The last ten percent — spacing, states, edge cases — is where trust in a product is actually built. I stay for it.",
+  },
+  {
+    title: "Always learning",
+    text: "Each project teaches me something the last one couldn't. I fold it back in and start the next one better.",
+  },
+];
 
 export default function AboutPage() {
   return (
-    <div>
-      <BackgroundGradientAnimation>
-        <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl">
-          <GlassNavbar />
-          <div className="flex flex-col items-center py-6">
-            <p className=" bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white to-white/40 playfair-display-italic ">
-              UI/UX Designer
-            </p>
-            <div className="mt-6 space-y-1 text-sm md:text-lg lg:text-md font-normal montserrat from-white/80 to-white/20 ">
-              <p>UX/UI Designer</p>
-              <p>App Designer</p>
-              <p>Brand Designer</p>
+    <div className="mx-auto w-full max-w-6xl px-6 sm:px-10">
+      <section className="grid gap-12 pb-16 pt-16 sm:pt-24 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-20">
+        <div>
+          <Reveal>
+            <h1 className="font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.05] tracking-tight">
+              Hi, I&rsquo;m Ioana.
+            </h1>
+          </Reveal>
+          <Reveal delay={80}>
+            <div className="mt-8 flex max-w-xl flex-col gap-5 text-lg leading-relaxed text-soft">
+              <p>
+                I&rsquo;m a product and UI designer based in {SITE.location}. I got
+                here by an odd route: years of drawing and painting collided
+                with a high-school interest in programming, and UI/UX turned
+                out to be the point where the two meet.
+              </p>
+              <p>
+                What I care about most is the gap between how software looks
+                in a portfolio and how it feels in someone&rsquo;s hand on a busy
+                day. My favorite users are the unglamorous ones — tutors,
+                tradespeople, teachers — because designing something they
+                genuinely rely on is harder, and more satisfying, than
+                designing something that merely photographs well.
+              </p>
             </div>
-          </div>
-        </div>
-      </BackgroundGradientAnimation>
-      <div className="max-w-5xl mx-auto pt-16">
-        {/* Header */}
-        <h1 className="text-5xl md:text-6xl text-[#4B3BA3] font-bold italic playfair-display-italic mt-4 mb-2">
-          Hi, I'm Ioana
-        </h1>
-        <h2 className="text-2xl md:text-3xl text-[#7B6FC2] italic playfair-display-italic mb-10">
-          and this is my designing journey
-        </h2>
-
-        {/* Timeline */}
-        <div className="relative pl-16 mb-16">
-          {/* Dotted line */}
-          <div className="absolute left-4 top-0 bottom-0 w-1 flex flex-col items-center">
-            <div className="h-full border-l-2 border-dotted border-[#B6A8F7]" />
-          </div>
-          {/* Timeline items */}
-          <div className="space-y-12">
-            <div className="relative">
-              <div className="absolute -left-16 top-0 text-[#7B6FC2] font-semibold text-lg montserrat-regular">
-                2023
-              </div>
-              <div className="bg-transparent">
-                <p className="text-[#4B3BA3] text-md montserrat-regular">
-                  Early passion for creativity through drawing, painting, and
-                  visual exploration.
-                  <br />
-                  Later combined with an interest in programming and technology
-                  during high school.
-                </p>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="absolute -left-16 top-0 text-[#7B6FC2] font-semibold text-lg montserrat-regular">
-                2023
-              </div>
-              <div className="bg-transparent">
-                <p className="text-[#4B3BA3] text-md montserrat-regular">
-                  Discovery of UI/UX and Graphic Design, leading to a clear
-                  career direction.
-                  <br />
-                  Courses, self-learning, and continuous skill development.
-                </p>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="absolute -left-16 top-0 text-[#7B6FC2] font-semibold text-lg montserrat-regular">
-                2024
-              </div>
-              <div className="bg-transparent">
-                <p className="text-[#4B3BA3] text-md montserrat-regular">
-                  Focus on improving design skills and gaining real-world
-                  experience. First client projects and hands-on work centered
-                  on user needs and practical solutions.
-                </p>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="absolute -left-16 top-0 text-[#7B6FC2] font-semibold text-lg montserrat-regular">
-                2025
-              </div>
-              <div className="bg-transparent">
-                <p className="text-[#4B3BA3] text-md montserrat-regular">
-                  Expansion into larger and more diverse projects. Branding,
-                  visual identities, logos, and a strong focus on UI/UX. App
-                  designs developed into fully functional products used by
-                  clients.
-                </p>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="absolute -left-16 top-0 text-[#7B6FC2] font-semibold text-lg montserrat-regular">
-                2026
-              </div>
-              <div className="bg-transparent">
-                <p className="text-[#4B3BA3] text-md montserrat-regular">
-                  Ongoing growth as a professional designer. Focus on
-                  higher-level opportunities, larger clients, and meaningful,
-                  user-centered design work.
-                </p>
-              </div>
-            </div>
-          </div>
+          </Reveal>
         </div>
 
-        {/* Core Values */}
-        <h3 className="text-2xl text-[#4B3BA3] italic playfair-display-italic mb-6 mt-12">
-          My core values
-        </h3>
-        <div className="flex flex-col md:flex-row gap-6 pb-16">
-          <div className="flex-1 bg-[#4B3BA3] text-white rounded-xl shadow-lg px-6 py-6 text-center montserrat-regular text-lg font-medium">
-            Always learning
+        {/* Portrait. TODO: drop a real photo at public/portrait.jpg and
+            replace this placeholder with an <Image>. */}
+        <Reveal delay={140}>
+          <div
+            role="img"
+            aria-label="Portrait of Ioana Serban (photo coming soon)"
+            className="flex aspect-[3/4] w-full max-w-sm items-end justify-start rounded-sm bg-line p-6"
+          >
+            <span className="font-display text-2xl italic text-soft">
+              Photo coming soon
+            </span>
           </div>
-          <div className="flex-1 bg-[#6B5FC7] text-white rounded-xl shadow-lg px-6 py-6 text-center montserrat-regular text-lg font-medium">
-            Empathizing, not just designing
-          </div>
-          <div className="flex-1 bg-[#7B6FC2] text-white rounded-xl shadow-lg px-6 py-6 text-center montserrat-regular text-lg font-medium">
-            Seeking originality and functionality
-          </div>
-          <div className="flex-1 bg-[#8B7FD7] text-white rounded-xl shadow-lg px-6 py-6 text-center montserrat-regular text-lg font-medium">
-            Known for my patience and meticulousity
-          </div>
+        </Reveal>
+      </section>
+
+      <section aria-labelledby="journey" className="border-t border-line py-16">
+        <Reveal>
+          <h2
+            id="journey"
+            className="text-[13px] uppercase tracking-[0.2em] text-soft"
+          >
+            The journey
+          </h2>
+        </Reveal>
+        <ol className="mt-10 flex max-w-2xl flex-col gap-10">
+          {timeline.map((item, i) => (
+            <li key={item.period}>
+              <Reveal delay={i * 50}>
+                <div className="grid gap-2 sm:grid-cols-[110px_minmax(0,1fr)] sm:gap-8">
+                  <span className="font-display text-lg italic text-accent">
+                    {item.period}
+                  </span>
+                  <p className="text-lg leading-relaxed text-soft">
+                    {item.text}
+                  </p>
+                </div>
+              </Reveal>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section aria-labelledby="values" className="border-t border-line py-16">
+        <Reveal>
+          <h2
+            id="values"
+            className="text-[13px] uppercase tracking-[0.2em] text-soft"
+          >
+            What I hold onto
+          </h2>
+        </Reveal>
+        <div className="mt-10 grid gap-x-16 gap-y-12 sm:grid-cols-2">
+          {values.map((value, i) => (
+            <Reveal key={value.title} delay={i * 50}>
+              <div>
+                <h3 className="font-display text-2xl tracking-tight">
+                  {value.title}
+                </h3>
+                <p className="mt-3 leading-relaxed text-soft">{value.text}</p>
+              </div>
+            </Reveal>
+          ))}
         </div>
-      </div>
-      <footer className="bg-slate-900 text-slate-300 py-12 text-center">
-        <p className="text-sm text-slate-400">
-          © 2025 Ioana Serban. All rights reserved.
-        </p>
-      </footer>
+      </section>
     </div>
   );
 }
